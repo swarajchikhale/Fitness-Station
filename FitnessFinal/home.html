@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Station</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="logout" style="text-align: right; position: fixed; top: 10px; right: 10px;">
+    <button class="btn" onclick="window.location.href='//localhost/login_project/index.html'">Logout</button>
+</div>
+
+    <!-- Header Section -->
+    <div class="container">
+        <!-- Logo Image -->
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Fitness Station Logo" class="logo">
+        </div>
+        
+        <!-- Main Content -->
+        <div class="content">
+            <p class="tagline">Transform your body, elevate your mind. Every rep, every step, you're one workout closer to a stronger you</p>
+            
+            <h1>FITNESS STATION</h1>
+            <p class="checkout">CHECKOUT!!</p>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button class="btn" id="workout-plans">WORKOUT PLANS</button>
+                <button class="btn" id="store-services">STORE SERVICES</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle the button click
+        document.getElementById('workout-plans').addEventListener('click', function() {
+            document.getElementById('our-workout').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.getElementById('store-services').addEventListener('click', function() {
+            document.getElementById('our-services').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+    <!-- Our Workout Plans Section -->
+    <section class="workout-plans">
+        <h2 id="our-workout">OUR WORKOUT PLANS</h2>
+        <br></br>
+        <div class="plans-container">
+            <div class="plan">
+                <h3>Beginner Workout</h3>
+                <img src="images\20241005_111248_0000.png" alt="Beginner Workout">
+                <p>A beginner workout focuses on basic exercises like squats, lunges, and push-ups to build strength, flexibility, and endurance</p>
+                <button class="btn-plan" onclick="window.location.href='beginner.html'">BEGINNER</button>
+            </div>
+            <div class="plan">
+                <h3>Intermediate Workout</h3>
+                <img src="images/20241005_110729_0000.png" alt="Intermediate Workout">
+                <p>An intermediate workout features more complex exercises with higher intensity to elevate your fitness level</p>
+                <button class="btn-plan" onclick="window.location.href='intermediate.html'">INTERMEDIATE</button>
+            </div>
+            <div class="plan">
+                <h3>Expert Workout</h3>
+                <img src="images/20241005_110525_0000.png" alt="Expert Workout">
+                <p>An expert workout includes high-intensity exercises to push your strength, endurance, and power to the max</p>
+                <button class="btn-plan" onclick="window.location.href='expert.html'">EXPERT</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Main Services Section -->
+    <section class="main-services">
+        <h1 id="our-services">OUR MAIN SERVICES</h1>
+ 
+        <div class="services-container">
+            <div class="service">
+                <img src="images/nutrition-store.jpg.jpg" alt="Nutrition Store">
+                <h2>Nutritions Store</h2>
+                <p>"Discover the secret to feeling your best with our premium, all-natural supplements and expert nutrition advice—because your health deserves nothing less!"</p>
+                <button class="shop-now-btn" onclick="window.location.href='nutritions_store.html'">SHOP NOW!!</button>
+            </div>
+            <div class="service">
+                <img src="images/gym-equipments.jpg.jpg" alt="Gym Equipments">
+                <h2>Gym Equipments</h2>
+                <p>"Upgrade your fitness journey with our top-quality gym equipment, designed to help you crush your goals and transform your workouts at unbeatable prices!"</p>
+                <button class="shop-now-btn" onclick="window.location.href='gym_equipments.html'">SHOP NOW!!</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="dos-section">
+        <h1>Do's</h1>
+        <div class="dos-container">
+            <div class="do-item">
+                <img src="images/sleep-icon.jpg.png" alt="Adequate Sleep Icon">
+                <h2>Adequate Sleep:</h2>
+                <p>Aim for 7-9 hours of quality sleep each night to support recovery, mental health, and overall well-being.</p>
+            </div>
+            <div class="do-item">
+                <img src="images/hydration-icon.jpg.png" alt="Stay Hydrated Icon">
+                <h2>Stay Hydrated:</h2>
+                <p>Drink plenty of water throughout the day to keep your body hydrated and support overall function.</p>
+            </div>
+            <div class="do-item">
+                <img src="images/diet-icon.jpg.png" alt="Balanced Diet Icon">
+                <h2>Balanced Diet:</h2>
+                <p>Eat a variety of nutrient-dense foods, including fruits, vegetables, lean proteins, whole grains, and healthy fats.</p>
+            </div>
+            <div class="do-item">
+                <img src="images/exercise-icon.jpg.png" alt="Regular Exercise Icon">
+                <h2>Regular Exercise:</h2>
+                <p>Engage in at least 150 minutes of moderate exercise or 75 minutes of vigorous activity per week, such as walking, cycling, or strength training.</p>
+            </div>
+        </div>
+    </section>
+
+    <button class="contact-button">Contact Us</button>
+
+    <!-- Add the flyout menu -->
+    <div class="flyout-menu">
+        <button class="close-menu">&times;</button>
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    
+    <!-- Add the overlay -->
+    <div class="overlay"></div>
+
+    <footer>
+        <p>© 2024 Fitness Station. All rights reserved.</p>
+    </footer>
+
+
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactButton = document.querySelector('.contact-button');
+            const flyoutMenu = document.querySelector('.flyout-menu');
+            const closeMenu = document.querySelector('.close-menu');
+            const overlay = document.querySelector('.overlay');
+        
+            function openMenu() {
+                flyoutMenu.classList.add('active');
+                overlay.classList.add('active');
+            }
+        
+            function closeMenuHandler() {
+                flyoutMenu.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        
+            contactButton.addEventListener('click', openMenu);
+            closeMenu.addEventListener('click', closeMenuHandler);
+            overlay.addEventListener('click', closeMenuHandler);
+        });
+        </script>
+</body>
+</html>

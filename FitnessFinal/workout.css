@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.store-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.store-header .logo {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.store-header h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 20px;
+    background-color: #ecf0f1;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #34495e;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Workout Section */
+.workout-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.workout-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Modified grid to accommodate wider boxes */
+.workout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr)); /* Increased from 300px */
+    gap: 170px;
+    padding: 0px; /* Added padding for breathing room */
+}
+
+.body-part {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px; /* Increased padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensure full width */
+}
+
+.body-part:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.body-part h3 {
+    color: #2980b9;
+    text-align: center;
+    margin-bottom: 30px; /* Increased margin */
+    font-size: 2rem;
+}
+
+.exercise {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px; /* Increased margin */
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 270px;
+}
+
+.exercise img {
+    width: 250px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.exercise-details {
+    padding: 20px; /* Increased padding */
+    flex-grow: 1;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .workout-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .exercise {
+        flex-direction: column;
+    }
+
+    .exercise img {
+        width: 100%;
+        height: 200px;
+    }
+}

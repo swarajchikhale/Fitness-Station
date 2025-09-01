@@ -1,0 +1,419 @@
+/* Product Section */
+.nutrition-products {
+    padding: 20px;
+    text-align: center;
+}
+
+.nutrition-products h2 {
+    font-size: 2rem;
+    color: #2980b9;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Cart Section */
+.cart-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cart-section h2 {
+    font-size: 2rem;
+    color: #27ae60;
+}
+
+#cart-items p {
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+/* Modal Styling for Checkout Window */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+    color: #27ae60;
+    font-size: 1.5rem;
+}
+
+.close-modal {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-modal:hover {
+    background-color: #c0392b;
+}
+
+/* Flyout Menu Styling */
+.flyout-menu {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.flyout-content {
+    padding: 20px;
+}
+
+.flyout-content h2 {
+    color: #2980b9;
+    font-size: 1.5rem;
+}
+
+.flyout-content p {
+    color: #333;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#flyout-product-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.close-flyout {
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #e74c3c;
+    transition: color 0.3s ease;
+}
+
+.close-flyout:hover {
+    color: #c0392b;
+}
+
+.flyout-open {
+    right: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn, .shop-now-btn, .add-to-cart, #checkout {
+        padding: 8px 16px;
+    }
+
+    .product, .service, .do-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.nutrition-store {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.nutrition-store h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 100px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover img {
+    transform: scale(1.1);
+}
+
+.product h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.product .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .product {
+        padding: 20px;
+    }
+
+    .product img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* ... (previous styles remain the same) ... */
+
+/* Header Styles */
+.store-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.store-header .logo {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.store-header h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 20px;
+    background-color: #ecf0f1;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #34495e;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Floating Cart Button */
+.floating-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50px; /* Slightly rounded corners */
+    width: 150px; /* Adjusted width */
+    height: 60px;
+    font-size: 18px; /* Slightly larger font size */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px; /* Added padding for better spacing */
+}
+
+.floating-btn:hover {
+    background-color: #2980b9;
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* Cart Flyout Menu */
+#cart-flyout {
+    right: -100%;
+    transition: right 0.3s ease;
+    width: 450px;
+}
+
+#cart-flyout.flyout-open {
+    right: 0;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+#checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-btn:hover {
+    background-color: #27ae60;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item .item-details {  /* Wrapper for item name and price */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+}
+
+.cart-item .price {  /* Style for the price */
+    align-self: flex-end;  /* Align price to the right within item-details */
+    margin-top: 5px;  /* Add some space between name and price */
+}
+
+.remove-item {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.remove-item:hover {
+    background-color: #c0392b;
+}
